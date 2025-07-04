@@ -2,7 +2,7 @@
 
 Ini adalah project sederhana untuk memenuhi tugas mata kuliah, dengan membuat sebuah aplikasi rekam medis.
 
-Project ini saya buat menggunakan bahasa pemrograman PHP versi 7.3 dengan framework Laravel versi 8.75, untuk tampilan saya menggunakan framework CSS Bootstrap versi 5, untuk database saya menggunakan postgreSql namun jika ingin menggunakan database lainnya juga bisa karena pada project ini struktur table dan column saya masukkan dalam migration sehingga bisa langsung untuk di generate menggunakan `php artisan migrate`.
+Project ini saya buat menggunakan bahasa pemrograman PHP versi 8.2 dengan framework Laravel versi 12, untuk tampilan saya menggunakan framework CSS Bootstrap versi 5, untuk database saya menggunakan postgreSql namun jika ingin menggunakan database lainnya juga bisa karena pada project ini struktur table dan column saya masukkan dalam migration sehingga bisa langsung untuk di generate menggunakan `php artisan migrate`.
 
 ## Langkah untuk Installasi
 
