@@ -8,6 +8,18 @@
 
     <form action="{{ route('biostatistik.store') }}" method="POST">
         @csrf
+        
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Ups!</strong> Ada kesalahan pada input anda:<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="mb-3">
             <label>ID Pasien</label>
             <input type="number" name="id_pasien" class="form-control" required>
@@ -19,8 +31,11 @@
         <div class="mb-3">
             <label>Jenis Kelamin</label>
             <select name="jenis_kelamin" class="form-control" required>
-                <option value="L">L</option>
-                <option value="P">P</option>
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+                <option value="Tidak Dapat Ditentukan">Tidak Dapat Ditentukan</option>
+                <option value="Tidak Diketahui">Tidak Diketahui</option>
+                <option value="Tidak Ditulis">Tidak Ditulis</option>
             </select>
         </div>
         <div class="mb-3">

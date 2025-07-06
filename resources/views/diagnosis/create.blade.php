@@ -6,6 +6,18 @@
 
     <form action="{{ route('diagnosis.store') }}" method="POST">
         @csrf
+        
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Ups!</strong> Ada kesalahan pada input anda:<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="mb-3">
             <label>Kode</label>
             <input type="text" name="kode" class="form-control" required>
@@ -35,19 +47,19 @@
             <input type="text" name="kaidah_koding" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Hasil Anamnesis</label>
+            <label><b>S (Hasil Anamnesis)</b></label>
             <input type="text" name="hasil_anamnesis" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Hasil Pnamnesis</label>
+            <label><b>O (Hasil Pemeriksaan Fisik dan Penunjang Sederhana)</b></label>
             <input type="text" name="hasil_pemeriksaan" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Penegakan Diagnosis</label>
+            <label><b>A (Penegakan Diagnosis)</b></label>
             <input type="text" name="penegakan_diagnosis" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Penatalaksanaan</label>
+            <label><b>P (Penatalaksanaan Komprehensif)</b></label>
             <input type="text" name="penatalaksanaan" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>

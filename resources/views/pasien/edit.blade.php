@@ -9,6 +9,17 @@
     <form action="{{ route('pasien.update', $data->id) }}" method="POST">
         @csrf
         @method('PUT')
+        
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Ups!</strong> Ada kesalahan pada input anda:<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <div class="mb-3">
             <label>Nama</label>
@@ -16,7 +27,7 @@
         </div>
         <div class="mb-3">
             <label>NIK</label>
-            <input type="number" name="nik" class="form-control" value="{{ $data->nik }}" required>
+            <input type="text" name="nik" class="form-control" value="{{ $data->nik }}" required maxlength="16" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 16)">
         </div>
         <div class="mb-3">
             <label>Tanggal</label>

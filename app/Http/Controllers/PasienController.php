@@ -22,7 +22,7 @@ class PasienController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|digits:16',
             'tanggal' => 'required',
             'diagnosis' => 'required',
         ]);
@@ -47,7 +47,7 @@ class PasienController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'nik' => 'required',
+            'nik' => 'required|digits:16',
             'tanggal' => 'required',
             'diagnosis' => 'required',
         ]);
