@@ -24,6 +24,7 @@ class PasienController extends Controller
             'nama' => 'required',
             'nik' => 'required|digits:16',
             'tanggal' => 'required',
+            'jenis_kelamin' => 'required',
             'diagnosis' => 'required',
         ]);
 
@@ -49,6 +50,7 @@ class PasienController extends Controller
             'nama' => 'required',
             'nik' => 'required|digits:16',
             'tanggal' => 'required',
+            'jenis_kelamin' => 'required',
             'diagnosis' => 'required',
         ]);
 

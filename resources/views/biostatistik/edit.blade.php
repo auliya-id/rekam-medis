@@ -32,19 +32,21 @@
         <div class="mb-3">
             <label>Jenis Kelamin</label>
             <select name="jenis_kelamin" class="form-control" required>
-                <option value="Laki-Laki" {{ $data->jenis_kelamin == 'Laki-Laki' ? 'selected' : '' }}>Laki-Laki</option>
-                <option value="Perempuan" {{ $data->jenis_kelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
-                <option value="Tidak Dapat Ditentukan" {{ $data->jenis_kelamin == 'Tidak Dapat Ditentukan' ? 'selected' : '' }}>Tidak Dapat Ditentukan</option>
-                <option value="Tidak Diketahui" {{ $data->jenis_kelamin == 'Tidak Diketahui' ? 'selected' : '' }}>Tidak Diketahui</option>
-                <option value="Tidak Ditulis" {{ $data->jenis_kelamin == 'Tidak Ditulis' ? 'selected' : '' }}>Tidak Ditulis</option>
+                <option value="Laki-Laki" {{ $data->jenis_kelamin == "Laki-Laki" ? 'selected' : '' }}>Laki-Laki</option>
+                <option value="Perempuan" {{ $data->jenis_kelamin == "Perempuan" ? 'selected' : '' }}>Perempuan</option>
+                <option value="Tidak Dapat Ditentukan" {{ $data->jenis_kelamin == "Tidak Dapat Ditentukan" ? 'selected' : '' }}>Tidak Dapat Ditentukan</option>
+                <option value="Tidak Diketahui" {{ $data->jenis_kelamin == "Tidak Diketahui" ? 'selected' : '' }}>Tidak Diketahui</option>
+                <option value="Tidak Ditulis" {{ $data->jenis_kelamin == "Tidak Ditulis" ? 'selected' : '' }}>Tidak Ditulis</option>
             </select>
         </div>
         <div class="mb-3">
             <label>Diagnosis</label>
             <select name="diagnosis" class="form-control" required>
-                <option value="K35 - Apendisitis" {{ $data->diagnosis == 'K35 - Apendisitis' ? 'selected' : '' }}>K35 - Apendisitis</option>
-                <option value="K29 - Gastritis" {{ $data->diagnosis == 'K29 - Gastritis' ? 'selected' : '' }}>K29 - Gastritis</option>
-                <option value="K80 - Batu Empedu" {{ $data->diagnosis == 'K80 - Batu Empedu' ? 'selected' : '' }}>K80 - Batu Empedu</option>
+                @foreach($diagnosis as $value)
+                    <option value="{{ $value->kode }}" {{ old('diagnosis', $data->diagnosis ?? '') == $value->kode ? 'selected' : '' }}>
+                        {{ $value->kode }}
+                    </option>
+                @endforeach
             </select>
         </div>
 

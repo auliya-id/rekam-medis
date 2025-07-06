@@ -18,6 +18,7 @@ class CreatePasienTable extends Migration
             $table->string('nama', 255)->nullable();
             $table->string('nik', 255)->nullable();
             $table->date('tanggal')->nullable();
+            $table->string('jenis_kelamin', 255)->nullable();
             $table->string('diagnosis', 255)->nullable();
         });
     }

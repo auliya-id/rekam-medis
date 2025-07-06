@@ -19,6 +19,7 @@
                     <th>Nama</th>
                     <th>NIK</th>
                     <th>Tanggal</th>
+                    <th>Jenis Kelamin</th>
                     <th>Diagnosis</th>
                     <th>Aksi</th>
                 </tr>
@@ -30,6 +31,7 @@
                     <td>{{ $data->nama }}</td>
                     <td>{{ $data->nik }}</td>
                     <td>{{ $data->tanggal }}</td>
+                    <td>{{ $data->jenis_kelamin }}</td>
                     <td>{{ $data->diagnosis }}</td>
                     <td>
                         <a href="{{ route('pasien.edit', $data->id) }}" class="btn btn-warning btn-sm">Edit</a>

@@ -14,6 +14,7 @@
                     <p>
                         NIK: {{ $item->nik }}<br>
                         Tanggal: {{ $item->tanggal }}<br>
+                        Jenis Kelamin: {{ $item->jenis_kelamin }}<br>
                         Diagnosis: {{ $item->diagnosis }}<br>
                     </p>
                 </div>

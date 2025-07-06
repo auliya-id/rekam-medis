@@ -33,6 +33,16 @@
             <input type="date" name="tanggal" class="form-control" required>
         </div>
         <div class="mb-3">
+            <label>Jenis Kelamin</label>
+            <select name="jenis_kelamin" class="form-control" required>
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+                <option value="Tidak Dapat Ditentukan">Tidak Dapat Ditentukan</option>
+                <option value="Tidak Diketahui">Tidak Diketahui</option>
+                <option value="Tidak Ditulis">Tidak Ditulis</option>
+            </select>
+        </div>
+        <div class="mb-3">
             <label>Diagnosis</label>
             <input type="text" name="diagnosis" class="form-control" required>
         </div>

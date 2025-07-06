@@ -123,8 +123,8 @@
                     <a href="{{ route('biostatistik.index') }}" class="@yield('activeBiostatistik')">
                         Biostatistik
                     </a>
-                    <a href="{{ route('pasien.create') }}" class="@yield('activePasien')">
-                        Pasien Baru
+                    <a href="{{ route('pasien.index') }}" class="@yield('activePasien')">
+                        Pasien
                     </a>
                     <a href="{{ route('riwayat-pasien.index') }}" class="@yield('activeRiwayatPasien')">
                         Riwayat Pasien

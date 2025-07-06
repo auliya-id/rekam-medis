@@ -34,6 +34,16 @@
             <input type="date" name="tanggal" class="form-control" value="{{ $data->tanggal }}" required>
         </div>
         <div class="mb-3">
+            <label>Jenis Kelamin</label>
+            <select name="jenis_kelamin" class="form-control" required>
+                <option value="Laki-Laki" {{ $data->jenis_kelamin == "Laki-Laki" ? 'selected' : '' }}>Laki-Laki</option>
+                <option value="Perempuan" {{ $data->jenis_kelamin == "Perempuan" ? 'selected' : '' }}>Perempuan</option>
+                <option value="Tidak Dapat Ditentukan" {{ $data->jenis_kelamin == "Tidak Dapat Ditentukan" ? 'selected' : '' }}>Tidak Dapat Ditentukan</option>
+                <option value="Tidak Diketahui" {{ $data->jenis_kelamin == "Tidak Diketahui" ? 'selected' : '' }}>Tidak Diketahui</option>
+                <option value="Tidak Ditulis" {{ $data->jenis_kelamin == "Tidak Ditulis" ? 'selected' : '' }}>Tidak Ditulis</option>
+            </select>
+        </div>
+        <div class="mb-3">
             <label>Diagnosis</label>
             <input type="text" name="diagnosis" class="form-control" value="{{ $data->diagnosis }}" required>
         </div>

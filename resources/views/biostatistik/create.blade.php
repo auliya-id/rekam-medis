@@ -41,9 +41,9 @@
         <div class="mb-3">
             <label>Diagnosis</label>
             <select name="diagnosis" class="form-control" required>
-                <option value="K35 - Apendisitis">K35 - Apendisitis</option>
-                <option value="K29 - Gastritis">K29 - Gastritis</option>
-                <option value="K80 - Batu Empedu">K80 - Batu Empedu</option>
+                @foreach($diagnosis as $value)
+                    <option value="{{ $value->kode }}">{{ $value->kode }}</option>
+                @endforeach
             </select>
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>

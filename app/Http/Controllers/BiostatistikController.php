@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Biostatistik;
+use App\Models\Diagnosis;
 
 class BiostatistikController extends Controller
 {
@@ -24,7 +25,9 @@ class BiostatistikController extends Controller
 
     public function create()
     {
-        return view('biostatistik.create');
+        $data['diagnosis'] = Diagnosis::get();
+
+        return view('biostatistik.create', $data);
     }
 
     public function store(Request $request)
@@ -49,7 +52,9 @@ class BiostatistikController extends Controller
     public function edit($id)
     {
         $data = Biostatistik::findOrFail($id);
-        return view('biostatistik.edit', compact('data'));
+        $diagnosis = Diagnosis::get();
+
+        return view('biostatistik.edit', compact('data', 'diagnosis'));
     }
 
     public function update(Request $request, $id)
